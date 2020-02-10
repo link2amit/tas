@@ -11,6 +11,6 @@ import com.tas.bean.User;
  * @author asrivastava
  *
  */
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
 }

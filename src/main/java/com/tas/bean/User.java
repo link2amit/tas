@@ -19,12 +19,37 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	private String first_name;
-	private String last_name;
+	private String firstName;
+	private String lastName;
 	private String email;
 	private String password;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public boolean isHasChangedPassword() {
+		return hasChangedPassword;
+	}
+
+	public void setHasChangedPassword(boolean hasChangedPassword) {
+		this.hasChangedPassword = hasChangedPassword;
+	}
+
 	private String role;
-	private boolean has_changed_password;
+	private boolean hasChangedPassword;
 
 	public long getId() {
 		return id;
@@ -32,22 +57,6 @@ public class User {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public String getFirst_name() {
-		return first_name;
-	}
-
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
-	}
-
-	public String getLast_name() {
-		return last_name;
-	}
-
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
 	}
 
 	public String getEmail() {
@@ -72,14 +81,6 @@ public class User {
 
 	public void setRole(String role) {
 		this.role = role;
-	}
-
-	public boolean isHas_changed_password() {
-		return has_changed_password;
-	}
-
-	public void setHas_changed_password(boolean has_changed_password) {
-		this.has_changed_password = has_changed_password;
 	}
 
 	@Override
